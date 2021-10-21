@@ -34,7 +34,7 @@
     margin:0;
   }
 
-  .signUpInput, .loginInput, .addBookInput, .updateBookInput {
+  .signUpInput, .loginInput, .addBookInput, .updateBookInput, .addStudentInput, .booksTransactionInput {
         padding-left:20px;
         width: 300px;
         height: 40px;
@@ -44,7 +44,7 @@
         border: 1px solid skyblue;
     }
 
-    .addBtn, .loginBtn, .addBookBtn, .updateBookBtn {
+    .addBtn, .loginBtn, .addBookBtn, .updateBookBtn, .addStudentBtn, .booksTransactionBtn {
         width: 320px;
         height: 40px;
         border: 1px solid skyblue;
@@ -55,7 +55,7 @@
         /* background-color:rgb(176, 188, 253); */
     }
 
-    .active, .addBtn:hover, .loginBtn:hover, .addBookBtn:hover, .updateBookBtn:hover, .bookdata button:hover {
+    .active, .addBtn:hover, .loginBtn:hover, .addBookBtn:hover, .updateBookBtn:hover, .bookdata button:hover, .addStudentBtn:hover, .booksTransactionBtn:hover {
         background-color: #666;
         color: white;
     }
@@ -77,13 +77,13 @@
       margin-right: 4px;
     }
 
-    active, .nav-home a:hover {
+    .active, .nav-home a:hover {
         background-color: #666;
         color: white;
     }
 
     .bookdata {
-      margin-left: 200px;
+      margin-left: 100px;
       margin-top: 25px;
       border-radius:10px;
       border-collapse: collapse;
@@ -114,6 +114,7 @@
     }
 
     .logoutAnchor {
-      margin-left: 1000px;
+      margin-left: 700px;
+      margin-top:8px
     }
 </style>

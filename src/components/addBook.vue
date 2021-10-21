@@ -12,7 +12,7 @@
 import Header from './Header.vue'
 import axios from 'axios'
 export default {
-    name: 'Home',
+    name: 'addBook',
     data() {
         return {
             name:'',

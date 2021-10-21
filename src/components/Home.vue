@@ -10,6 +10,7 @@
             <th>Publisher</th>
             <th>Publish Year</th>
             <th>Cost(INR)</th>
+            <th>Availability</th>
             <th>Actions</th>
         </tr>
         <tr v-for="(item,index) in library_data" :key="item.id">
@@ -19,6 +20,8 @@
             <td>{{item.publisher}}</td>
             <td>{{item.publish_year}}</td>
             <td>{{item.cost}}</td>
+            <td v-if="item.is_available== undefined || item.is_available==true">Available</td>
+            <td v-else>Not Available</td>
             <td>
                 <router-link :to="'/updateBook/'+item.id">Update</router-link>
                 <button v-on:click="deleteBook(item.id)">Delete</button>

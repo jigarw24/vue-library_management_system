@@ -1,8 +1,10 @@
 <template>
     <div class="nav-home">
-        <router-link to="/">Home</router-link>
-        <router-link to="addBook">Add Book</router-link>
-        <a class="logoutAnchor" href="" v-on:click="logout">Logout</a>
+        <router-link to="/" style="margin-top:8px">Home</router-link>
+        <router-link to="addBook" style="margin-top:8px">Add Book</router-link>
+        <router-link to="addStudent" style="margin-top:8px">Add Member</router-link>
+        <router-link to="booksTransaction" style="margin-top:8px">Books In/Out</router-link>
+        <a class="logoutAnchor" v-on:click="logout">Logout</a>
     </div>
 </template>
 

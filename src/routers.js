@@ -1,8 +1,10 @@
 import Home from "./components/Home.vue";
 import signUp from "./components/signUp.vue";
-import Login from "./components/Login.vue"
-import addBook from "./components/addBook.vue"
-import updateBook from "./components/updateBook.vue"
+import Login from "./components/Login.vue";
+import addBook from "./components/addBook.vue";
+import updateBook from "./components/updateBook.vue";
+import addStudent from "./components/addStudent.vue";
+import booksTransaction from "./components/booksTransaction.vue";
 import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
@@ -27,9 +29,19 @@ const routes = [
         path:"/addBook"
     },
     {
+        name: "addStudent",
+        component: addStudent,
+        path:"/addStudent"
+    },
+    {
         name: "updateBook",
         component: updateBook,
         path:"/updateBook/:id"
+    },
+    {
+        name: "booksTransaction",
+        component: booksTransaction,
+        path:"/booksTransaction"
     }
 ]
 
