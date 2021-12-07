@@ -1,7 +1,7 @@
 <template>
     <Header />
-    <h3>Add Student</h3>
-    <input type="text" class="addStudentInput" v-model="student.name" placeholder="Enter Student Name" required/><br>
+    <h3>Add Member</h3>
+    <input type="text" class="addStudentInput" v-model="student.name" placeholder="Enter Member Name" required/><br>
     <input type="text" class="addStudentInput" v-model="student.phone" placeholder="Enter Phone No" required/><br>
     <input type="text" class="addStudentInput" v-model="student.admission_year" placeholder="Enter year of Admission" required/><br>
     <input type="text" class="addStudentInput" v-model="student.address" placeholder="Enter Address" required/><br>
@@ -25,7 +25,6 @@ export default {
     },
     mounted() {
         let user = localStorage.getItem('user-info');
-        this.name = JSON.parse(user).name;
         if (!user) {
             this.$router.push({name:'signUp'});          
         }

@@ -12,10 +12,9 @@
 import Header from './Header.vue'
 import axios from 'axios'
 export default {
-    name: 'Home',
+    name: 'updateBook',
     data() {
         return {
-            name:'',
             book_data: {
                 book_name:'',
                 publisher:'',
@@ -27,7 +26,6 @@ export default {
     },
     async mounted() {
         let user = localStorage.getItem('user-info');
-        this.name = JSON.parse(user).name;
         if (!user) {
             this.$router.push({name:'signUp'});          
         }

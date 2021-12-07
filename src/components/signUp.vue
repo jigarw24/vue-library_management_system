@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="signupLogin">
         <h3>SignUp</h3><br>
         <!-- <form @submit.prevent="addBook()"> -->
         <input type="text" class="signUpInput" v-model="name" placeholder="Enter your Name" required/><br>
         <input type="number" class="signUpInput" v-model="mobile" placeholder="Enter your Mobile No" required/><br>
-        <input type="password" class="signUpInput" v-model="password" placeholder="Enter your Password" required/><br>
+        <input type="password" class="signUpInput" v-model="password" placeholder="Enter Password" required/><br>
         <button class="addBtn" v-on:click="signUp">Add</button>
         <!-- </form> -->
         <p>

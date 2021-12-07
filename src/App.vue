@@ -83,8 +83,7 @@
     }
 
     .bookdata {
-      margin-left: 100px;
-      margin-top: 25px;
+      margin: auto;
       border-radius:10px;
       border-collapse: collapse;
       border: 1px solid #ddd;
@@ -117,4 +116,58 @@
       margin-left: 700px;
       margin-top:8px
     }
+
+    .updateIcon, .deleteIcon {
+      width:20px;
+      height:20px;
+    }
+
+    .logoutIcon {
+      width:30px;
+      height:30px;
+      background-color: skyblue;
+      border-radius: 5px;
+    }
+
+    .idCard {
+      border: 1px solid skyblue;
+      border-radius: 5px;
+      width:435px;
+      height:520px;
+      margin: auto;
+    }
+
+    .profilePicture {
+      width:200px;
+      height:200px;
+      background-color: skyblue;
+      border-radius: 5px;
+      margin-top: 30px;
+      margin-left: 5px;
+    }
+
+    .profileInfo {
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: left;
+    }
+
+    .librarianSignature {
+      text-align: right;
+      margin-right: 20px;
+    }
+
+    .signatureImg {
+      width:60px;
+      height:36px;
+    }
+
+    .signupLogin {
+      margin-top: 100px;
+    }
+
+    .footer {
+      margin-top: 30px;
+    }
+
 </style>

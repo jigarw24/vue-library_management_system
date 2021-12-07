@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="signupLogin">
         <h3>Login</h3><br>
         <input type="number" class="loginInput" v-model="mobile" placeholder="Enter your Mobile No" required/><br>
         <input type="password" class="loginInput" v-model="password" placeholder="Enter your Password" required/><br>
         <button class="loginBtn" v-on:click="login">Login</button>
         <p>
-            <router-link to="/signUp">SignUp</router-link>
+            <router-link to="/signUp">Register an Admin</router-link>
         </p>
     </div>
 </template>

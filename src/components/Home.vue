@@ -11,6 +11,7 @@
             <th>Publish Year</th>
             <th>Cost(INR)</th>
             <th>Availability</th>
+            <th>Alloted to</th>
             <th>Actions</th>
         </tr>
         <tr v-for="(item,index) in library_data" :key="item.id">
@@ -22,17 +23,21 @@
             <td>{{item.cost}}</td>
             <td v-if="item.is_available== undefined || item.is_available==true">Available</td>
             <td v-else>Not Available</td>
+            <td v-if="item.is_available== undefined || item.is_available==true"></td>
+            <td v-else><router-link :to="'/profile/'+item.transactions[item.transactions.length-1].issued_to_member">{{item.transactions[item.transactions.length-1].issued_to_member}}</router-link></td>
             <td>
-                <router-link :to="'/updateBook/'+item.id">Update</router-link>
-                <button v-on:click="deleteBook(item.id)">Delete</button>
+                <router-link :to="'/updateBook/'+item.id"><img class ="updateIcon" src="../assets/edit_icon.png"></router-link>
+                <button v-on:click="deleteBook(item.id)"><img class ="deleteIcon" src="../assets/delete_icon.png"></button>
             </td>
         </tr>
     </table>
+    <Footer />
 </template>
 
 <script>
-import Header from './Header.vue'
-import axios from 'axios'
+import Header from './Header.vue';
+import Footer from './Footer.vue';
+import axios from 'axios';
 export default {
     name: 'Home',
     data() {
@@ -42,10 +47,15 @@ export default {
         }
     },
     async mounted() {
+        let login_user = localStorage.getItem('user-info');
+        if (!login_user) {
+            this.$router.push({name:'signUp'});          
+        }
         this.loadTable();
     },
     components: {
-        Header
+        Header,
+        Footer
     },
     methods: {
         async deleteBook(id) {
@@ -57,7 +67,8 @@ export default {
         },
         async loadTable() {
             let user = localStorage.getItem('user-info');
-            this.name = JSON.parse(user).name;
+            let logged_in_user = JSON.parse(user).name;
+            this.name = logged_in_user;
             if (!user) {
                 this.$router.push({name:'signUp'});          
             }

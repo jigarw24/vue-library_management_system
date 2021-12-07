@@ -5,6 +5,7 @@ import addBook from "./components/addBook.vue";
 import updateBook from "./components/updateBook.vue";
 import addStudent from "./components/addStudent.vue";
 import booksTransaction from "./components/booksTransaction.vue";
+import profile from "./components/profile.vue";
 import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
@@ -42,7 +43,12 @@ const routes = [
         name: "booksTransaction",
         component: booksTransaction,
         path:"/booksTransaction"
-    }
+    },
+    {
+        name: "profile",
+        component: profile,
+        path:"/profile/:student_id"
+    },
 ]
 
 const router = createRouter({

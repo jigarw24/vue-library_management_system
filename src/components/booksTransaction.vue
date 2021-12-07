@@ -3,9 +3,9 @@
     <h3>Book In/Out</h3>
     <input type="text" class="booksTransactionInput" v-model="book_id" placeholder="Enter Book Id" required/><br>
     <input type="text" class="booksTransactionInput" v-model="student_id" placeholder="Enter Student Id" required/><br>
-    <select class="booksTransactionInput" name="inout" id="inout" v-model="inout" required>
-        <option class="booksTransactionInput" value="issue">Issue</option>
-        <option class="booksTransactionInput" value="return">Return</option>
+    <select class="booksTransactionInput" name="inout" id="inout" v-model="inout">
+        <option class="booksTransactionInput" name="issue" value="issue">Issue</option>
+        <option class="booksTransactionInput" name="return" value="return">Return</option>
     </select><br>
     <button class="booksTransactionBtn" v-on:click="doTransaction">Make Transaction</button>
 </template>
@@ -25,7 +25,6 @@ export default {
     },
     mounted() {
         let user = localStorage.getItem('user-info');
-        this.name = JSON.parse(user).name;
         if (!user) {
             this.$router.push({name:'signUp'});          
         }

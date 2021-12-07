@@ -4,7 +4,7 @@
         <router-link to="addBook" style="margin-top:8px">Add Book</router-link>
         <router-link to="addStudent" style="margin-top:8px">Add Member</router-link>
         <router-link to="booksTransaction" style="margin-top:8px">Books In/Out</router-link>
-        <a class="logoutAnchor" v-on:click="logout">Logout</a>
+        <a class="logoutAnchor" v-on:click="logout"><img class ="logoutIcon" src="../assets/logout_icon.png"></a>
     </div>
 </template>
 
